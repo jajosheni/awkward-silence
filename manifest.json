@@ -1,0 +1,18 @@
+{
+  "manifest_version": 2,
+  "name": "AwkwardSilenceBreaker",
+  "description": "Generate a topic to talk about after a specified period of silence",
+  "version": "1.0",
+  "icons": {
+    "16": "/images/16.png",
+    "48": "/images/48.png",
+    "128": "/images/128.png"
+  },
+  "page_action": {
+    "default_icon": {
+      "16": "/images/16.png",
+      "48": "/images/48.png",
+      "128": "/images/128.png"
+    }
+  }
+}
