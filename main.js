@@ -9,14 +9,15 @@ async function getGoogleMeetTab() {
   return tab;
 }
 
-async function randomizeTopics() {
+async function listenForAwkwardSilence() {
   const tab = await getGoogleMeetTab();
 
   console.log(state, tab?.audible);
 
   if (!tab?.audible) {
-    if(state.now() - state.lastTime > 10 * 1000){
-      console.log('muted for 10 seconds, resetting timers');
+    if(state.now() - state.lastTime > 7 * 1000){
+      await sendNewRandomTopic();
+
       state.lastTime = new Date().getTime();
     }
   } else {
@@ -24,6 +25,10 @@ async function randomizeTopics() {
   }
 }
 
+async function sendNewRandomTopic() {
+  await console.log('send a message via slack api');
+}
+
 chrome.runtime.onInstalled.addListener(async () => {
-  setInterval(randomizeTopics, 1000);
+  setInterval(listenForAwkwardSilence, 1000);
 });
