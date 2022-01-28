@@ -12,8 +12,7 @@ async function getGoogleMeetTab() {
 
 async function listenForAwkwardSilence() {
   const tab = await getGoogleMeetTab();
-
-  console.log(state, tab?.audible);
+  if(!tab) return;
 
   if (!tab?.audible) {
     if(state.now() - state.lastTime > 7 * 1000){
@@ -29,7 +28,7 @@ async function listenForAwkwardSilence() {
 async function sendNewRandomTopic() {
   state.topic = topics.split('\n')[Math.floor(Math.random() * 335)];
 
-  await console.log("Awkward silence: " + state.topic);
+  // send message to slack api
 }
 
 chrome.runtime.onInstalled.addListener(async () => {
