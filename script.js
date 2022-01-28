@@ -82,7 +82,7 @@ reStartBtn.addEventListener('click', () => {
 });
 
 // https://capitalizemytitle.com/random-topic-generator/
-var topics = `
+const topics = `
 What are some things that you should not say during a job interview?
 Where did you go on your last vacation?
 What is your favorite song of all time?
@@ -130,7 +130,7 @@ What do you bring with you everywhere you go?
 How much time do you spend on the internet? What do you usually do?
 What is the most disgusting habit some people have?
 Where and when was the most amazing sunset you have ever seen?
-WhichÂ recent news storyÂ is the most interesting?
+Which recent news story is the most interesting?
 Where is the worst place you have been stuck for a long time?
 If you had to change your name, what would your new name be?
 What is something that really annoys you but doesn't bother most people?
@@ -152,7 +152,7 @@ What is the best room in your house? Why?
 Who is someone popular now that you really like? Why do you like them so much?
 Where is the best place to take a date?
 What smell brings back great memories?
-What's the best pet name you can come up with for a specific type of pet? (Like theseÂ orange cat names.)
+What's the best pet name you can come up with for a specific type of pet? (Like these orange cat names.)
 How often do you help others? Who do you help? How do you help?
 What are you best at?
 What makes you nervous?
@@ -220,7 +220,7 @@ What's the most frustrating app you have tried?
 What's the most addictive mobile game you have played?
 Which app seemed like magic the first time you used it?
 What is the strangest app you have heard of or tried?
-What're the best and worst things about the marketplace where you get your apps?
+What are the best and worst things about the marketplace where you get your apps?
 Which app has helped society the most? Which one has hurt society the most?
 An app mysteriously appears on your phone that does something amazing. What does it do?
 How often do you check your phone?
@@ -262,7 +262,7 @@ Where is the most relaxing place you have been?
 Do you prefer traveling alone or with a group?
 What do you think of tour group packages?
 Do you prefer to go off the beaten path when you travel?
-What was the most overhyped place you've traveled to?
+What was the most over-hyped place you've traveled to?
 Have you traveled to any different countries? Which ones?
 Where is the most awe-inspiring place you have been?
 What's the best thing about traveling? How about the worst thing?
@@ -348,7 +348,7 @@ What would you want your last meal to be if you were on death row?
 What food do you know you shouldn't eat but can't stop yourself?
 Do you like spicy food? Why or why not? What is the spiciest thing you have ever eaten?
 Does the government have a place in regulating food? To what extent should government regulate food?
-When people make mistakes about food (especially foreign food), do you feel the need to correct them? (i.e.Â sushi / sashimiÂ orÂ stromboli / calzone)
+When people make mistakes about food (especially foreign food), do you feel the need to correct them? (i.e. sushi / sashimi or stromboli / calzone)
 If your mind were an island, what would it look like?
 What flavor of ice cream do you wish existed?
 If you had a personal mascot, what would your mascot be?
@@ -358,7 +358,7 @@ You have to relive one day of your life forever. Which day do you choose?
 What does your own personal hell look like? How about your own personal heaven?
 You find a remote that can rewind, fast forward, stop, and start time. What do you do with it?
 If you could call up anyone in the world and have a one-hour conversation, who would you call?
-The world has become infested with rabid dogs with the intelligence of a 5-year-old, where do you hole up to survive the â€œa-pup-calypseâ€?
+The world has become infested with rabid dogs with the intelligence of a 5-year-old, where do you hole up to survive the a-pup-calypse?
 A portal to another world opens in front of you. You don't know how long it will stay open or if you'll be able to get back after you go through. What do you do?
 What did you do on your most recent birthday?
 Where did you grow up?
@@ -415,5 +415,5 @@ What was your worst vacation experience?
 What do you do when you're bored?
 What was the biggest thing you have ever won?
 What three words best describe you?
-Whatâ€™s your favorite way to waste time?
+What is your favorite way to waste time?
 `;
