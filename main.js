@@ -28,7 +28,28 @@ async function listenForAwkwardSilence() {
 async function sendNewRandomTopic() {
   state.topic = topics.split('\n')[Math.floor(Math.random() * 335)];
 
-  // send message to slack api
+  const myHeaders = new Headers();
+
+  myHeaders.append("Access-Control-Allow-Headers", "Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization");
+  myHeaders.append("Access-Control-Allow-Origin", "*");
+  myHeaders.append("Access-Control-Allow-Methods", "GET,HEAD,POST")
+  myHeaders.append("Content-Type", "application/json");
+
+  const raw = JSON.stringify({
+    'message': state.topic
+  });
+
+  const requestOptions = {
+    method: 'POST',
+    headers: myHeaders,
+    body: raw,
+    redirect: 'follow'
+  };
+
+  fetch("http://localhost", requestOptions)
+    .then(response => response.text())
+    .then(result => console.log(result))
+    .catch(error => console.log('error', error));
 }
 
 chrome.runtime.onInstalled.addListener(async () => {
