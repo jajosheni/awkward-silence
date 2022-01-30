@@ -14,7 +14,8 @@ app.use(bodyParser.json());
 app.post('/', function (request, response) {
   const body = request.body;
 
-  if (body.message && body.token) {
+  let [responseText, responseCode] = ['Message sent!', 200];
+  if (body.message && body.token && body.channel) {
     const data = JSON.stringify({
       'channel': '#virtual-coffee',
       'text': body.message
@@ -37,9 +38,11 @@ app.post('/', function (request, response) {
       .catch(function (error) {
         console.log(error);
       });
+  } else {
+    [responseText, responseCode] = ['Invalid data: message, token and channel required.', 400];
   }
 
-  response.send('Message sent!');
+  response.status(responseCode).send(responseText);
 });
 
 app.listen(port, () => console.log(`server running on port ${port}!`));
