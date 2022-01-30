@@ -45,4 +45,4 @@ app.post('/', function (request, response) {
   response.status(responseCode).send(responseText);
 });
 
-app.listen(port, () => console.log(`server running on port ${port}!`));
+app.listen(process.env.PORT || port, () => console.log(`Server running on port ${port}!`));
