@@ -1,7 +1,9 @@
 const state = {
   lastTime: new Date().getTime(),
   now: () => new Date().getTime(),
-  topic: ''
+  topic: '',
+  channel: '#virtual-coffee',
+  token: 'SLACK TOKEN HERE'
 };
 
 async function getGoogleMeetTab() {
@@ -36,7 +38,9 @@ async function sendNewRandomTopic() {
   myHeaders.append("Content-Type", "application/json");
 
   const raw = JSON.stringify({
-    'message': state.topic
+    'message': state.topic,
+    'channel': state.channel,
+    'token': state.token
   });
 
   const requestOptions = {
