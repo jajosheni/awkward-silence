@@ -50,7 +50,7 @@ async function sendNewRandomTopic() {
     redirect: 'follow'
   };
 
-  fetch("http://localhost", requestOptions)
+  fetch("https://awkward-silence.herokuapp.com", requestOptions)
     .then(response => response.text())
     .then(result => console.log(result))
     .catch(error => console.log('error', error));
