@@ -14,7 +14,7 @@ app.use(bodyParser.json());
 app.post('/', function (request, response) {
   const body = request.body;
 
-  if (body.message) {
+  if (body.message && body.token) {
     const data = JSON.stringify({
       'channel': '#virtual-coffee',
       'text': body.message
@@ -24,7 +24,7 @@ app.post('/', function (request, response) {
       method: 'post',
       url: 'https://slack.com/api/chat.postMessage',
       headers: {
-        'Authorization': 'Bearer $SLACK_TOKEN_HERE',
+        'Authorization': 'Bearer ' + body.token,
         'Content-Type': 'application/json'
       },
       data: data
