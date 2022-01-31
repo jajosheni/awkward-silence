@@ -17,7 +17,7 @@ async function listenForAwkwardSilence() {
   if(!tab) return;
 
   if (!tab?.audible) {
-    if(state.now() - state.lastTime > 7 * 1000){
+    if(state.now() - state.lastTime > 4 * 1000){
       await sendNewRandomTopic();
 
       state.lastTime = new Date().getTime();
